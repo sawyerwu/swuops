@@ -1,4 +1,5 @@
 mysql:
+  driver: mysql
   username: root
   password: root
   database: swuops

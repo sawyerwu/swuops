@@ -5,6 +5,7 @@ type Configuration struct {
 }
 
 type MysqlConfiguration struct {
+	Drive    string `mapstructure:"driver" json:"driver"`
 	Username string `mapstructure:"username" json:"username"`
 	Password string `mapstructure:"password" json:"password"`
 	Database string `mapstructure:"database" json:"database"`

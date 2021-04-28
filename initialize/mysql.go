@@ -15,11 +15,11 @@ func InitMysql() {
 		common.Conf.Mysql.Database,
 		common.Conf.Mysql.Query)
 	fmt.Println(args)
-	db, err := gorm.Open("mysql", args)
+	db, err := gorm.Open(common.Conf.Mysql.Drive, args)
 	if err != nil {
 		panic("failed to connect database, err: " + err.Error())
 	}
-	// db.SingularTable(true)
+	db.SingularTable(true)
 	common.Mysql = db
 
 	fmt.Println("Init db connection success")
