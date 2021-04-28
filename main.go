@@ -1,7 +1,11 @@
 package main
 
-import "fmt"
+import (
+	_ "github.com/go-sql-driver/mysql"
+	"github.com/sawyerwu/swuops/initialize"
+)
 
 func main() {
-	fmt.Println("hello swu")
+	initialize.InitConfig()
+	initialize.InitMysql()
 }

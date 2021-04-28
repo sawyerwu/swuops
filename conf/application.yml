@@ -1,0 +1,7 @@
+mysql:
+  username: root
+  password: root
+  database: swuops
+  host: 47.99.108.202
+  port: 3306
+  query: charset=utf8mb4&parseTime=true&collation=utf8mb4_bin

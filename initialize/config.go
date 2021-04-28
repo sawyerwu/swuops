@@ -2,7 +2,7 @@ package initialize
 
 import (
 	"fmt"
-	"github.com/sawyerwu/swu-ops/pkg/common"
+	"github.com/sawyerwu/swuops/pkg/common"
 	"github.com/spf13/viper"
 	"os"
 )
@@ -25,7 +25,7 @@ func InitConfig() {
 	}
 
 	// convert config file to struct
-	if err := v.Unmarshal(&common.Configuration{}); err != nil {
+	if err := v.Unmarshal(&common.Conf); err != nil {
 		panic(fmt.Sprintf("Init config file failed: %v", err))
 	}
 
