@@ -1,9 +1,13 @@
 package initialize
 
-import "github.com/gin-gonic/gin"
+import (
+	"github.com/gin-gonic/gin"
+	"github.com/sawyerwu/swuops/middleware"
+)
 
 func InitRouters() *gin.Engine {
-	r := gin.Default()
-	// TODO
+	r := gin.New()
+	r.Use(middleware.LoggerToFile())
+
 	return r
 }
