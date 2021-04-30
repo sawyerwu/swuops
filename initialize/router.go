@@ -7,7 +7,7 @@ import (
 
 func InitRouters() *gin.Engine {
 	r := gin.New()
-	r.Use(middleware.LoggerToFile())
+	r.Use(middleware.LoggerToFile(), middleware.RecoveryMiddleware())
 
 	return r
 }

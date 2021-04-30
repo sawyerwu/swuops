@@ -7,3 +7,7 @@ go get -u github.com/rifflock/lfshook
   
 
 gin.New() create routers
+
+logrus参考  
+https://www.cnblogs.com/xinliangcoder/p/11212573.html
+
